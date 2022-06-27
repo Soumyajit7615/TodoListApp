@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="firstpage.css">
+    <script src="myScript.js"></script>
+</head>
+<body>
+    <div class="container jumbotron">
+        <h1 class="text-center" style="color:rgb(58, 19, 3)" >Welcome To Our Website</h1>
+        <h2 class="text-center" style="color:rgb(126, 41, 8)">Easily Manage Your Daily Work</h2><br>
+ 
+        <input type="text" id="personName" placeholder="Enter Your Name">
+        <button type="submit" class="btn btn-primary btn-center" id="addName" onclick="addName()">SUBMIT</button>
+
+    </div>
+    <script>
+        function addName()
+        {
+            var name = document.getElementById("personName").value;
+            localStorage.setItem("myName", name);
+            window.location.href="todo.html";
+        }
+    </script>
+</body>
+</html>
