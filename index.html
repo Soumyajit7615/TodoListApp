@@ -23,8 +23,17 @@
         function addName()
         {
             var name = document.getElementById("personName").value;
-            localStorage.setItem("myName", name);
-            window.location.href="todo.html";
+            if(name === '')
+            {
+                alert("Name Should Not Be Empty!");
+                window.location.href="index.html";
+            }
+            else{
+                localStorage.setItem("myName", name);
+                document.getElementById("personName").value='';
+                window.location.href="todo.html";
+
+            }
         }
     </script>
 </body>
