@@ -26,3 +26,7 @@ function myAddFunction()
   }
 }
 
+function removeAll(){
+  document.getElementById("showItem").innerHTML='';
+
+}
